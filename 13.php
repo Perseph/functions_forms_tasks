@@ -12,8 +12,9 @@ function requestPost($key)
 function calc($string)
 {
     $arr = explode(' ',requestPost($string));
-    $arr = array_count_values($arr);
-    $arr = sort($arr,SORT_NUMERIC);
+    $arr = array_count_values($arr); 
+    /** @see http://php.net/manual/en/function.sort.php */
+    sort($arr, SORT_NUMERIC);
     return $arr;
 }
 
